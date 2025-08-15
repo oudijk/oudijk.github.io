@@ -1,0 +1,135 @@
+/* Classic green terminal theme */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Consolas', 'Courier New', Courier, monospace;
+    background-color: #000; /* black background */
+    color: #00FF00; /* bright green text */
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #00FF00;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: #00FF00;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+nav ul li a {
+    color: #00FF00;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    transition: 0.2s;
+}
+
+nav ul li a:hover {
+    background-color: #00FF00;
+    color: #000;
+}
+
+main {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #000;
+    border-left: 4px solid #00FF00;
+}
+
+section h2 {
+    margin-bottom: 10px;
+    color: #00FF00;
+}
+
+section p {
+    color: #00FF00;
+}
+
+/* Buttons styled like terminal prompts */
+.btn {
+    display: inline-block;
+    padding: 8px 15px;
+    margin-top: 10px;
+    background-color: #000;
+    color: #00FF00;
+    text-decoration: none;
+    border: 1px solid #00FF00;
+    font-weight: bold;
+    border-radius: 3px;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background-color: #00FF00;
+    color: #000;
+}
+
+/* Cards for projects/blogs */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.card {
+    background-color: #000;
+    border: 1px solid #00FF00;
+    padding: 15px;
+    border-radius: 3px;
+    flex: 1 1 calc(33% - 15px);
+    min-width: 250px;
+    transition: 0.2s;
+}
+
+.card:hover {
+    background-color: #003300; /* subtle green glow on hover */
+}
+
+.card h2 {
+    color: #00FF00;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 0.95rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 50px;
+    background-color: #000;
+    border-top: 2px solid #00FF00;
+    color: #00FF00;
+}
+
+/* Terminal-style prompt before section titles */
+section h2::before {
+    content: "$ ";
+    color: #00FF00;
+}
