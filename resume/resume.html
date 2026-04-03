@@ -61,7 +61,7 @@
     letter-spacing: 3px;
     text-transform: uppercase;
     color: rgba(255,255,255,0.65);
-    margin-bottom: 20px;
+    margin-bottom: 4px;
   }
 
   .contact-grid {
@@ -98,10 +98,11 @@
   }
 
   /* ── Section ── */
-  .section { margin-top: 28px; }
+  .section { margin-top: 14px; }
+  .section:first-child { margin-top: 0; }
 
   .section-header {
-    display: inline-flex;
+    display: block;
     align-items: center;
     background: var(--blue);
     color: white;
@@ -111,8 +112,21 @@
     text-transform: uppercase;
     padding: 5px 14px;
     border-radius: 2px;
-    margin-bottom: 18px;
+    margin-bottom: 8px;
   }
+
+    .subsection-header {
+    display: inline-block;
+    background: #f0f4f8;       /* light background pill */
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 13px;           /* slightly smaller than section headers */
+    font-weight: 600;          /* semi-bold */
+    color: var(--blue);
+    margin-bottom: 6px;
+    letter-spacing: 1px;
+    text-transform: none;
+}
 
   /* ── Summary ── */
   .summary p {
@@ -122,14 +136,14 @@
   }
 
   /* ── Experience ── */
-  .job { margin-bottom: 22px; }
+  .job { margin-bottom: 8px; }
   .job:last-child { margin-bottom: 0; }
 
   .job-header {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    margin-bottom: 2px;
+    margin-bottom: 4px;
   }
 
   .job-title {
@@ -159,7 +173,7 @@
   .job ul li {
     position: relative;
     padding-left: 14px;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
     font-size: 13px;
     color: var(--text);
     line-height: 1.55;
@@ -177,7 +191,7 @@
   .job-divider {
     border: none;
     border-top: 1px dashed var(--border);
-    margin: 16px 0;
+    margin: 12px 0;
   }
 
   /* ── Education ── */
@@ -216,7 +230,8 @@
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    margin-top: 4px;
+    margin-top: 2px;
+    margin-bottom: 4px;
   }
 
   .tag {
@@ -296,298 +311,294 @@
     </div>
   </div>
 
-  <!-- BODY -->
-  <div class="body">
+<!-- BODY -->
+<div class="body">
+    <div></div>
+  <!-- SUMMARY -->
+  <div class="section summary">
+    <div class="section-header">Summary</div>
+    <p>
+      Security engineer and proactive leader with 10+ years building resilient IT and OT systems. 
+      Cofounder of WinSecure and President of KSU’s Association of IT Professionals, leading 140+ members. 
+      Led security projects, penetration assessments, and multi-cloud protection initiatives while researching GenAI-driven cyber threats. 
+      Expert at converting complex vulnerabilities into actionable defenses that reduce risk and ensure compliance. 
+      Recognized for initiative, problem-solving, and bridging cutting-edge research with hands-on implementation.
+    </p>
+    <hr class="job-divider">
+  </div>
 
-<!-- SUMMARY -->
-<div class="section summary">
-  <div class="section-header">Summary</div>
-  <p>
-    Security engineer and proactive leader with 10+ years building resilient IT and OT systems. 
-    Cofounder of WinSecure and President of KSU’s Association of IT Professionals, leading 140+ members. 
-    Led security projects, penetration assessments, and multi-cloud protection initiatives while researching GenAI-driven cyber threats. 
-    Expert at converting complex vulnerabilities into actionable defenses that reduce risk and ensure compliance. 
-    Recognized for initiative, problem-solving, and bridging cutting-edge research with hands-on implementation.
-  </p>
-</div>
+  <!-- WORK EXPERIENCE -->
+  <div class="section">
+    <div class="section-header">Work Experience</div>
 
-    <!-- WORK EXPERIENCE -->
-    <div class="section">
-      <div class="section-header">Work Experience</div>
-
-      <div class="job">
-        <div class="job-header">
-          <span class="job-title">Graduate Research Assistant</span>
-          <span class="job-dates">07/2025 – Present</span>
-        </div>
-        <div class="job-company">Kennesaw State University &bull; Kennesaw, GA, USA</div>
-        <ul>
-          <li>Conducted in-depth research on Generative Artificial Intelligence threats across operational technology and information technology environments, addressing AI-enabled attack vectors, DFIR impacts, and security governance gaps.</li>
-          <li>Evaluated the amplifying effects of GenAI on each phase of the Cyber Kill Chain in OT environments, proposing mitigation strategies based on established security frameworks such as NIST SP 800‑53r5, NIST AI RMF, and IEC 62443.</li>
-          <li>Authored a research paper that integrates the Cyber Kill Chain, Mitre ATT&CK, and OT security frameworks to characterize GenAI as a force multiplier in industrial cyber‑physical systems, which will be featured at the AMCIS2026 cybersecurity conference.</li>
-        </ul>
+    <div class="job">
+      <div class="job-header">
+        <span class="job-title">Graduate Research Assistant</span>
+        <span class="job-dates">07/2025 – Present</span>
       </div>
-
-      <hr class="job-divider">
-
-      <div class="job">
-        <div class="job-header">
-          <span class="job-title">Security Engineer</span>
-          <span class="job-dates">09/2023 – 01/2024</span>
-        </div>
-        <div class="job-company">Shock Media B.V. &bull; Almelo, OV, The Netherlands</div>
-        <ul>
-          <li>Researched and optimized endpoint protection solutions by integrating them with a Security Information and Event Management (SIEM) system and implementing multi-factor authentication to enhance security and compliance.</li>
-          <li>Ensured adherence to industry standards by evaluating solutions against TMap NEXT® and frameworks such as NEN7510, ISO9001, ISO27001, ISO27002, GDPR, and PCI-DSS.</li>
-          <li>Performed comprehensive security assessments, identified vulnerabilities, and collaborated with vendors to bolster the organization's overall security posture.</li>
-          <li>Oversaw incident detection and response strategies, aligning them with industry standards and adapting protocols to emerging threats.</li>
-        </ul>
-      </div>
-
-      <hr class="job-divider">
-
-      <div class="job">
-        <div class="job-header">
-          <span class="job-title">Cyber Security Engineer</span>
-          <span class="job-dates">02/2023 – 07/2023</span>
-        </div>
-        <div class="job-company">WinSecure (Founder) &bull; Zwolle, OV, The Netherlands</div>
-        <ul>
-          <li>Founded and cultivated WinSecure, establishing a cybersecurity community for SMBs in Zwolle while managing key partnerships to facilitate startup growth.</li>
-          <li>Developed and executed incident playbooks alongside a comprehensive Disaster Recovery Plan to ensure organizational resilience and structured response to incidents.</li>
-          <li>Ensured compliance with standards such as ISO 9001, NEN 7510, ISO 27002, ISO 27001, and NIST SP800-53 while conducting vulnerability assessments to enhance network security.</li>
-          <li>Guided clients on security best practices and successfully transitioned operational responsibilities to guarantee ongoing continuity and effective security measures.</li>
-        </ul>
-      </div>
-
-      <hr class="job-divider">
-
-      <div class="job">
-        <div class="job-header">
-          <span class="job-title">IT Event Staff Member</span>
-          <span class="job-dates">11/2022 – 07/2023</span>
-        </div>
-        <div class="job-company">Windesheim University of Applied Sciences &bull; Zwolle, OV, The Netherlands</div>
-        <ul>
-          <li>Spearheaded and facilitated an engaging ethical hacking workshop at the Makersfestival in Zwolle, effectively presenting to a diverse audience of both young and adult participants.</li>
-          <li>Raised awareness regarding the perils of phishing and spoofing through interactive sessions and pragmatic hands-on exercises.</li>
-          <li>Provided comprehensive support and guidance to students interested in pursuing studies at Windesheim, offering detailed insights into program offerings and career opportunities.</li>
-          <li>Organized and managed various student support initiatives, contributing to information sessions, campus tours, and individual consultations.</li>
-        </ul>
-      </div>
-
-      <hr class="job-divider">
-
-      <div class="job">
-        <div class="job-header">
-          <span class="job-title">Technical Support Intern</span>
-          <span class="job-dates">12/2018 – 07/2019</span>
-        </div>
-        <div class="job-company">Municipality of Hengelo &bull; Hengelo, OV, The Netherlands</div>
-        <ul>
-          <li>Served efficiently as both first- and second-line service desk representative, ensuring the swift resolution of IT issues while overseeing the migration from Windows 7 to Windows 10 across the organization.</li>
-          <li>Acted as lead administrator responsible for the installation and configuration of wireless access points, routers, and switches during the relocation to a new office facility.</li>
-          <li>Worked with VMware and hybrid cloud-operated environments, as well as managed Active Directory systems.</li>
-          <li>Conducted a graduation project focused on risk analysis and network management tasks.</li>
-        </ul>
-      </div>
+      <div class="job-company">Kennesaw State University &bull; Kennesaw, GA, USA</div>
+      <ul>
+        <li>Conducted in-depth research on Generative Artificial Intelligence threats across operational technology and information technology environments, addressing AI-enabled attack vectors, DFIR impacts, and security governance gaps.</li>
+        <li>Evaluated the amplifying effects of GenAI on each phase of the Cyber Kill Chain in OT environments, proposing mitigation strategies based on established security frameworks such as NIST SP 800‑53r5, NIST AI RMF, and IEC 62443.</li>
+        <li>Authored a research paper that integrates the Cyber Kill Chain, Mitre ATT&CK, and OT security frameworks to characterize GenAI as a force multiplier in industrial cyber‑physical systems, which will be featured at the AMCIS2026 cybersecurity conference.</li>
+      </ul>
     </div>
 
-    <!-- EDUCATION -->
-    <div class="section">
-      <div class="section-header">Education</div>
-      <div class="edu-grid">
-        <div class="edu-item">
-          <div class="edu-degree">MSc – Information Technology</div>
-          <div class="edu-school">Kennesaw State University &bull; Kennesaw, GA, USA</div>
-          <div class="edu-year">Expected May 2026 &bull; Graduate Certificate in IT Security</div>
-        </div>
-        <div class="edu-item">
-          <div class="edu-degree">BSc – IT Infrastructure Design &amp; Security</div>
-          <div class="edu-school">Windesheim University of Applied Sciences &bull; Zwolle, OV, The Netherlands</div>
-          <div class="edu-year">Graduated January 2024</div>
-        </div>
-        <div class="edu-item">
-          <div class="edu-degree">NLQF4 Associate's Degree – IT Management</div>
-          <div class="edu-school">ROC van Twente &bull; Hengelo, OV, The Netherlands</div>
-          <div class="edu-year">Graduated July 2019</div>
-        </div>
-        <div class="edu-item">
-          <div class="edu-degree">NLQF3 Associate's Degree – IT Management</div>
-          <div class="edu-school">ROC van Twente &bull; Hengelo, OV, The Netherlands</div>
-          <div class="edu-year">Graduated July 2017</div>
-        </div>
+    <hr class="job-divider">
+
+    <div class="job">
+      <div class="job-header">
+        <span class="job-title">Security Engineer</span>
+        <span class="job-dates">09/2023 – 01/2024</span>
       </div>
+      <div class="job-company">Shock Media B.V. &bull; Almelo, OV, The Netherlands</div>
+      <ul>
+        <li>Researched and optimized endpoint protection solutions by integrating them with a Security Information and Event Management (SIEM) system and implementing multi-factor authentication to enhance security and compliance.</li>
+        <li>Ensured adherence to industry standards by evaluating solutions against TMap NEXT® and frameworks such as NEN7510, ISO9001, ISO27001, ISO27002, GDPR, and PCI-DSS.</li>
+        <li>Performed comprehensive security assessments, identified vulnerabilities, and collaborated with vendors to bolster the organization's overall security posture.</li>
+        <li>Oversaw incident detection and response strategies, aligning them with industry standards and adapting protocols to emerging threats.</li>
+      </ul>
     </div>
 
-<!-- SKILLS + CERTIFICATIONS -->
-<div class="two-col" style="margin-top: 28px; gap: 0 44px; align-items: start;">
-  <!-- Skills Column -->
-  <div class="section" style="margin-top: 0;">
+    <hr class="job-divider">
+
+    <div class="job">
+      <div class="job-header">
+        <span class="job-title">Cyber Security Engineer</span>
+        <span class="job-dates">02/2023 – 07/2023</span>
+      </div>
+      <div class="job-company">WinSecure (Founder) &bull; Zwolle, OV, The Netherlands</div>
+      <ul>
+        <li>Founded and cultivated WinSecure, establishing a cybersecurity community for SMBs in Zwolle while managing key partnerships to facilitate startup growth.</li>
+        <li>Developed and executed incident playbooks alongside a comprehensive Disaster Recovery Plan to ensure organizational resilience and structured response to incidents.</li>
+        <li>Ensured compliance with standards such as ISO 9001, NEN 7510, ISO 27002, ISO 27001, and NIST SP800-53 while conducting vulnerability assessments to enhance network security.</li>
+        <li>Guided clients on security best practices and successfully transitioned operational responsibilities to guarantee ongoing continuity and effective security measures.</li>
+      </ul>
+    </div>
+
+    <hr class="job-divider">
+
+    <div class="job">
+      <div class="job-header">
+        <span class="job-title">IT Event Staff Member</span>
+        <span class="job-dates">11/2022 – 07/2023</span>
+      </div>
+      <div class="job-company">Windesheim University of Applied Sciences &bull; Zwolle, OV, The Netherlands</div>
+      <ul>
+        <li>Spearheaded and facilitated an engaging ethical hacking workshop at the Makersfestival in Zwolle, effectively presenting to a diverse audience of both young and adult participants.</li>
+        <li>Raised awareness regarding the perils of phishing and spoofing through interactive sessions and pragmatic hands-on exercises.</li>
+        <li>Provided comprehensive support and guidance to students interested in pursuing studies at Windesheim, offering detailed insights into program offerings and career opportunities.</li>
+        <li>Organized and managed various student support initiatives, contributing to information sessions, campus tours, and individual consultations.</li>
+      </ul>
+    </div>
+
+    <hr class="job-divider">
+
+    <div class="job">
+      <div class="job-header">
+        <span class="job-title">Technical Support Intern</span>
+        <span class="job-dates">12/2018 – 07/2019</span>
+      </div>
+      <div class="job-company">Municipality of Hengelo &bull; Hengelo, OV, The Netherlands</div>
+      <ul>
+        <li>Served efficiently as both first- and second-line service desk representative, ensuring the swift resolution of IT issues while overseeing the migration from Windows 7 to Windows 10 across the organization.</li>
+        <li>Acted as lead administrator responsible for the installation and configuration of wireless access points, routers, and switches during the relocation to a new office facility.</li>
+        <li>Worked with VMware and hybrid cloud-operated environments, as well as managed Active Directory systems.</li>
+        <li>Conducted a graduation project focused on risk analysis and network management tasks.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- EDUCATION -->
+  <div class="section">
+    <hr class="job-divider">
+    <div class="section-header">Education</div>
+    <div class="edu-grid">
+      <div class="edu-item">
+        <div class="edu-degree">MSc – Information Technology</div>
+        <div class="edu-school">Kennesaw State University &bull; Kennesaw, GA, USA</div>
+        <div class="edu-year">Expected May 2026 &bull; Graduate Certificate in IT Security</div>
+      </div>
+      <div class="edu-item">
+        <div class="edu-degree">BSc – IT Infrastructure Design &amp; Security</div>
+        <div class="edu-school">Windesheim University of Applied Sciences &bull; Zwolle, OV, The Netherlands</div>
+        <div class="edu-year">Graduated January 2024</div>
+      </div>
+      <div class="edu-item">
+        <div class="edu-degree">NLQF4 Associate's Degree – IT Management</div>
+        <div class="edu-school">ROC van Twente &bull; Hengelo, OV, The Netherlands</div>
+        <div class="edu-year">Graduated July 2019</div>
+      </div>
+      <div class="edu-item">
+        <div class="edu-degree">NLQF3 Associate's Degree – IT Management</div>
+        <div class="edu-school">ROC van Twente &bull; Hengelo, OV, The Netherlands</div>
+        <div class="edu-year">Graduated July 2017</div>
+      </div>
+    </div>
+    <hr class="job-divider">
+  </div>
+
+  <!-- CERTIFICATIONS + LEADERSHIP -->
+  <div class="two-col" style="margin-top: 10px; gap: 0 44px; align-items: start;">
+
+    <!-- Certifications Column -->
+    <div class="section" style="margin-top: 0;">
+      <div class="section-header">Certifications</div>
+      <ul class="cert-list">
+        <li>
+          <div class="cert-name">Certified in Cybersecurity (CC)</div>
+          <div class="cert-issuer">ISC² &bull; Credential ID: 1516438 &bull; April 2024</div>
+        </li>
+        <li>
+          <div class="cert-name">Google Cybersecurity Certificate</div>
+          <div class="cert-issuer">Coursera &bull; Credential ID: ZQKD7AD3BNWT &bull; January 2024</div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Leadership Column -->
+    <div class="section" style="margin-top: 0; flex: 1;">
+      <div class="section-header">Leadership</div>
+      <ul class="cert-list" style="margin-top: 0;">
+        <li>
+          <div class="cert-name">President – KSU Association of IT Professionals</div>
+          <div class="cert-issuer">Kennesaw State University &bull; April 2025 – Present</div>
+        </li>
+        <li>
+          <div class="cert-name">Vice President – KSU Association of IT Professionals</div>
+          <div class="cert-issuer">Kennesaw State University &bull; April 2024 – March 2025</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <hr class="job-divider">
+
+  <!-- SKILLS -->
+  <div class="section" style="margin-top: 4px;">
     <div class="section-header">Skills</div>
     <div class="tags">
-      <span class="tag">Penetration Testing</span>
+      <span class="tag">Cloud Security</span>
+      <span class="tag">Communication</span>
+      <span class="tag">Endpoint Hardening</span>
       <span class="tag">Ethical Hacking</span>
+      <span class="tag">Incident Detection</span>
+      <span class="tag">Incident Prevention</span>
+      <span class="tag">Incident Response</span>
+      <span class="tag">Network Security</span>
+      <span class="tag">Penetration Testing</span>
+      <span class="tag">Problem Solving</span>
+      <span class="tag">Risk Mitigation</span>
+      <span class="tag">SIEM Monitoring</span>
       <span class="tag">Attack Surface Analysis</span>
       <span class="tag">Threat Modeling</span>
-      <span class="tag">Incident Response</span>
-      <span class="tag">SIEM Monitoring</span>
-      <span class="tag">Compliance</span>
-      <span class="tag">Risk Mitigation</span>
-      <span class="tag">Network Security</span>
-      <span class="tag">Endpoint Hardening</span>
+      <span class="tag">Vulnerability Analysis</span>
     </div>
   </div>
 
-  <!-- Certifications Column -->
-  <div class="section" style="margin-top: 0;">
-    <div class="section-header">Certifications</div>
-    <ul class="cert-list">
-      <li>
-        <div class="cert-name">Certified in Cybersecurity (CC)</div>
-        <div class="cert-issuer">ISC² &bull; Credential ID: 1516438 &bull; April 2024</div>
-      </li>
-      <li>
-        <div class="cert-name">Google Cybersecurity Certificate</div>
-        <div class="cert-issuer">Coursera &bull; Credential ID: ZQKD7AD3BNWT &bull; January 2024</div>
-      </li>
-      <li>
-        <div class="cert-name">Microsoft Office Specialist</div>
-        <div class="cert-issuer">Certiport &bull; Excel, Word, PowerPoint &bull; March 2016</div>
-      </li>
-    </ul>
-  </div>
-</div>
-
-<!-- TOOLS + LEADERSHIP -->
-<div class="two-col" style="margin-top: 28px; gap: 0 44px; align-items: start; display: flex;">
-  
- <!-- Tools Column -->
-<div class="section" style="margin-top: 0; flex: 1;">
+      <hr class="job-divider">
+ 
+<!-- TECH STACK -->
+<div class="section job" style="margin-top: 12px;">
   <div class="section-header">Tech Stack</div>
 
-  <!-- Offensive / Pentesting -->
-  <div class="subsection">
-    <div class="subsection-header">Offensive Security & Penetration Testing</div>
-    <div class="tags">
-      <span class="tag">Kali Linux</span>
-      <span class="tag">Metasploit</span>
-      <span class="tag">Burp Suite</span>
-      <span class="tag">NMap</span>
-      <span class="tag">Hak5 Toolkit</span>
-      <span class="tag">Aircrack-ng suite</span>
-      <span class="tag">Hashcat</span>
-      <span class="tag">Hydra</span>
-      <span class="tag">BeEF</span>
-      <span class="tag">John the Ripper</span>
-      <span class="tag">Netcat</span>
-      <span class="tag">Nessus</span>
-      <span class="tag">OpenVAS</span>
-      <span class="tag">OWASP ZAP</span>
-    </div>
-  </div>
+  <div class="two-col">
 
-  <!-- Forensics & Incident Response -->
-  <div class="subsection">
-    <div class="subsection-header">Forensics & Incident Response</div>
-    <div class="tags">
-      <span class="tag">Autopsy</span>
-      <span class="tag">FTK Imager</span>
-      <span class="tag">Volatility</span>
-      <span class="tag">Zeek</span>
-      <span class="tag">Wireshark</span>
-    </div>
-  </div>
+    <!-- Column 1 -->
+    <div>
+      <!-- Offensive Security & Penetration Testing -->
+      <div class="subsection" style="margin-bottom: 12px;">
+        <div class="subsection-header">Offensive Security & Penetration Testing</div>
+        <ul>
+          <li>Aircrack-ng suite</li>
+          <li>Hak5 Toolkit</li>
+          <li>Hashcat</li>
+          <li>Hydra</li>
+          <li>Kali Linux</li>
+          <li>Metasploit</li>
+          <li>NMap</li>
+        </ul>
+      </div>
 
-  <!-- Monitoring & SIEM -->
-  <div class="subsection">
-    <div class="subsection-header">Monitoring & SIEM</div>
-    <div class="tags">
-      <span class="tag">Splunk</span>
-      <span class="tag">ELK Stack</span>
-      <span class="tag">Wazuh</span>
-      <span class="tag">OSSEC</span>
-      <span class="tag">AWS</span>
-      <span class="tag">Azure</span>
+      <!-- Monitoring & SIEM -->
+      <div class="subsection" style="margin-bottom: 12px;">
+        <div class="subsection-header">Monitoring & SIEM</div>
+        <ul>
+          <li>AWS</li>
+          <li>GravityZone</li>
+          <li>ELK Stack</li>
+          <li>OSSEC</li>
+          <li>Splunk</li>
+          <li>Wazuh</li>
+        </ul>
+      </div>
     </div>
-  </div>
 
-  <!-- Platforms & Automation -->
-  <div class="subsection">
-    <div class="subsection-header">Platforms & Automation</div>
-    <div class="tags">
-      <span class="tag">Linux (Ubuntu, Debian)</span>
-      <span class="tag">Windows & tools</span>
-      <span class="tag">Docker</span>
-      <span class="tag">Kubernetes</span>
-      <span class="tag">Python</span>
-      <span class="tag">Git</span>
-      <span class="tag">JavaScript</span>
-      <span class="tag">SQL</span>
+    <!-- Column 2 -->
+    <div>
+      <!-- Platforms & Automation -->
+      <div class="subsection" style="margin-bottom: 12px;">
+        <div class="subsection-header">Platforms & Automation</div>
+        <ul>
+          <li>Debian & Ubuntu Linux</li>
+          <li>Docker</li>
+          <li>Git</li>
+          <li>Kubernetes</li>
+          <li>Python</li>
+          <li>SQL</li>
+          <li>Windows</li>
+        </ul>
+      </div>
+
+      <!-- Forensics & Incident Response -->
+      <div class="subsection" style="margin-bottom: 12px;">
+        <div class="subsection-header">Forensics & Incident Response</div>
+        <ul>
+          <li>Autopsy</li>
+          <li>CAINE</li>
+          <li>FTK Imager</li>
+          <li>Volatility</li>
+          <li>Wireshark</li>
+          <li>Zeek</li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
 
-  <!-- Leadership Column -->
-  <div class="section" style="margin-top: 0; flex: 1;">
-    <div class="section-header">Leadership</div>
-    <ul class="cert-list" style="margin-top: 0;">
-      <li>
-        <div class="cert-name">President – KSU Association of IT Professionals</div>
-        <div class="cert-issuer">Kennesaw State University &bull; April 2025 – Present</div>
-      </li>
-      <li>
-        <div class="cert-name">Vice President – KSU Association of IT Professionals</div>
-        <div class="cert-issuer">Kennesaw State University &bull; April 2024 – March 2025</div>
-      </li>
-    </ul>
-  </div>
-
-</div>
-
-    <!-- PROJECTS -->
-    <div class="section">
-      <div class="section-header">Highlighted Projects</div>
-      <div class="projects-grid">
-        <div class="project-item">
-          <div class="project-name">Library Security Assessment – IT Capstone</div>
-          <div class="project-meta">Kennesaw State University &bull; Spring 2026</div>
-          <div class="project-desc">Delivered a Phase 1 Purple Team self-assessment framework for public-sector IT. Produced reusable playbooks and expansion roadmaps for statewide deployment.</div>
-        </div>
-        <div class="project-item">
-          <div class="project-name">Anti-Forensics as a Service &amp; GenAI in DFIR</div>
-          <div class="project-meta">Kennesaw State University &bull; Fall 2025</div>
-          <div class="project-desc">Mapped GenAI risks across enterprise environments and compared regulatory landscapes for admissibility and accountability of AI-influenced evidence.</div>
-        </div>
-        <div class="project-item">
-          <div class="project-name">Real-Time IoT Sensor Data Security</div>
-          <div class="project-meta">Kennesaw State University &bull; Spring 2025</div>
-          <div class="project-desc">Built a Python system for real-time IoT data collection with encrypted storage and transmission to protect sensor data.</div>
-        </div>
-        <div class="project-item">
-          <div class="project-name">Cybersecurity Challenges of Healthcare Data</div>
-          <div class="project-meta">Kennesaw State University &bull; Fall 2024</div>
-          <div class="project-desc">Researched healthcare data security challenges and developed an RFP for an enhanced data protection solution.</div>
-        </div>
+  <!-- PROJECTS -->
+  <div class="section">
+    <hr class="job-divider">
+    <div class="section-header">Highlighted Projects</div>
+    <div class="projects-grid">
+      <div class="project-item">
+        <div class="project-name">Library Security Assessment – IT Capstone</div>
+        <div class="project-meta">Kennesaw State University &bull; Spring 2026</div>
+        <div class="project-desc">Delivered a Phase 1 Purple Team self-assessment framework for public-sector IT. Produced reusable playbooks and expansion roadmaps for statewide deployment.</div>
+      </div>
+      <div class="project-item">
+        <div class="project-name">Anti-Forensics as a Service &amp; GenAI in DFIR</div>
+        <div class="project-meta">Kennesaw State University &bull; Fall 2025</div>
+        <div class="project-desc">Mapped GenAI risks across enterprise environments and compared regulatory landscapes for admissibility and accountability of AI-influenced evidence.</div>
+      </div>
+      <div class="project-item">
+        <div class="project-name">Real-Time IoT Sensor Data Security</div>
+        <div class="project-meta">Kennesaw State University &bull; Spring 2025</div>
+        <div class="project-desc">Built a Python system for real-time IoT data collection with encrypted storage and transmission to protect sensor data.</div>
+      </div>
+      <div class="project-item">
+        <div class="project-name">Cybersecurity Challenges of Healthcare Data</div>
+        <div class="project-meta">Kennesaw State University &bull; Fall 2024</div>
+        <div class="project-desc">Researched healthcare data security challenges and developed an RFP for an enhanced data protection solution.</div>
       </div>
     </div>
-
-    <!-- INTERESTS -->
-    <div class="section interests">
-      <div class="section-header">Interests</div>
-      <div class="tags">
-        <span class="tag">Networking</span>
-        <span class="tag">Penetration Testing &amp; Ethical Hacking</span>
-        <span class="tag">Cybersecurity Conferences &amp; Hackathons</span>
-        <span class="tag">Capture the Flag (CTF) Events</span>
-        <span class="tag">Reading &amp; Researching</span>
-        <span class="tag">Martial Arts</span>
-      </div>
-    </div>
-
   </div>
+
+  <!-- INTERESTS -->
+  <div class="section interests"></div>
 
   <div class="footer">References available upon request</div>
+
 </div>
 </body>
 </html>
