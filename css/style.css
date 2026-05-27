@@ -54,6 +54,7 @@ main {
     padding: 0 20px;
 }
 
+/* Original section style (keep as is) */
 section {
     margin-bottom: 30px;
     padding: 20px;
@@ -66,10 +67,12 @@ section h2 {
     color: #00FF00;
 }
 
-section p {
+section h2::before {
+    content: "$ ";
     color: #00FF00;
 }
 
+/* Buttons and Cards */
 .btn {
     display: inline-block;
     padding: 8px 15px;
@@ -108,45 +111,22 @@ section p {
     background-color: #003300;
 }
 
-.card h2 {
-    color: #00FF00;
-    margin-bottom: 10px;
-}
-
-.card p {
-    font-size: 0.95rem;
-}
-
-footer {
-    text-align: center;
-    padding: 15px 0;
-    margin-top: 50px;
-    background-color: #000;
-    border-top: 2px solid #00FF00;
-    color: #00FF00;
-}
-
-section h2::before {
-    content: "$ ";
-    color: #00FF00;
-}
-
-/* ── New Dossier Layout Additions ── */
-
+/* Dossier Layout Overrides (High Priority) */
 .dossier-header {
-    border: 1px solid #00FF00;
-    padding: 20px;
-    margin-bottom: 30px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 12px;
+    border: 1px solid #00FF00 !important;
+    padding: 20px !important;
+    margin-bottom: 30px !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    flex-wrap: wrap !important;
+    gap: 12px !important;
 }
 
 .dossier-section {
-    border-left: 4px solid #00FF00;
-    padding: 0 0 0 20px;
-    margin-bottom: 30px;
+    border-left: 4px solid #00FF00 !important;
+    padding: 0 0 0 20px !important;
+    margin-bottom: 30px !important;
+    background-color: transparent !important;
 }
 
 .section-label {
@@ -156,9 +136,6 @@ section h2::before {
     color: #00FF00;
     text-transform: uppercase;
 }
-
-.section-label::before { content: '[ '; }
-.section-label::after  { content: ' ]'; }
 
 .id-block {
     display: grid;
@@ -201,5 +178,11 @@ section h2::before {
     font-size: 0.7rem;
 }
 
-.blink { animation: blink 1s step-end infinite; }
-@keyframes blink { 50% { opacity: 0; } }
+footer {
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 50px;
+    background-color: #000;
+    border-top: 2px solid #00FF00;
+    color: #00FF00;
+}
