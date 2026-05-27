@@ -182,7 +182,7 @@ main {
 .field-val a:hover { text-shadow: 0 0 6px #00ff41; }
 
 /* ── Profile text & Activities ── */
-.profile-text { font-size: 13px; line-height: 1.9; color: #00ff41cc; }
+.profile-text { font-size: 13px; line-height: 1.9; color: #00ff41cc; text-align: justify; }
 .activity-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
 
 .activity-list li {
