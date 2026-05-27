@@ -1,4 +1,6 @@
-// js/matrix.js
+console.log('matrix.js loaded');
+console.log('canvas:', document.getElementById('matrix-bg'));
+
 const canvas = document.getElementById('matrix-bg');
 const ctx = canvas.getContext('2d');
 
@@ -11,7 +13,7 @@ const cols = Math.floor(canvas.width / fontSize);
 const drops = Array(cols).fill(1);
 
 function drawMatrix() {
-    ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+    ctx.fillStyle = 'rgba(0, 0, 0, 0.2)';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     ctx.fillStyle = '#00ff41';
     ctx.font = fontSize + 'px Courier New';
