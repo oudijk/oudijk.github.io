@@ -7,8 +7,8 @@
 
 body {
     font-family: 'Consolas', 'Courier New', Courier, monospace;
-    background-color: #000; /* black background */
-    color: #00FF00; /* bright green text */
+    background-color: #000;
+    color: #00FF00;
     line-height: 1.6;
     padding: 0;
     margin: 0;
@@ -70,7 +70,6 @@ section p {
     color: #00FF00;
 }
 
-/* Buttons styled like terminal prompts */
 .btn {
     display: inline-block;
     padding: 8px 15px;
@@ -89,7 +88,6 @@ section p {
     color: #000;
 }
 
-/* Cards for projects/blogs */
 .card-container {
     display: flex;
     flex-wrap: wrap;
@@ -107,7 +105,7 @@ section p {
 }
 
 .card:hover {
-    background-color: #003300; /* subtle green glow on hover */
+    background-color: #003300;
 }
 
 .card h2 {
@@ -119,7 +117,6 @@ section p {
     font-size: 0.95rem;
 }
 
-/* Footer */
 footer {
     text-align: center;
     padding: 15px 0;
@@ -129,8 +126,80 @@ footer {
     color: #00FF00;
 }
 
-/* Terminal-style prompt before section titles */
 section h2::before {
     content: "$ ";
     color: #00FF00;
 }
+
+/* ── New Dossier Layout Additions ── */
+
+.dossier-header {
+    border: 1px solid #00FF00;
+    padding: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.dossier-section {
+    border-left: 4px solid #00FF00;
+    padding: 0 0 0 20px;
+    margin-bottom: 30px;
+}
+
+.section-label {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    color: #00FF00;
+    text-transform: uppercase;
+}
+
+.section-label::before { content: '[ '; }
+.section-label::after  { content: ' ]'; }
+
+.id-block {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 24px;
+}
+
+.photo-frame {
+    border: 1px solid #00FF00;
+    width: 140px; height: 170px;
+    display: flex; align-items: center; justify-content: center;
+}
+
+.field {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 8px;
+    border-bottom: 1px dashed #00FF0033;
+    padding-bottom: 6px;
+    margin-bottom: 8px;
+}
+
+.file-refs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+}
+
+.file-ref {
+    border: 1px solid #00FF00;
+    padding: 15px;
+    text-decoration: none;
+    color: #00FF00;
+    display: block;
+}
+
+.badge {
+    border: 1px solid #00FF00;
+    padding: 2px 6px;
+    font-size: 0.7rem;
+}
+
+.blink { animation: blink 1s step-end infinite; }
+@keyframes blink { 50% { opacity: 0; } }
