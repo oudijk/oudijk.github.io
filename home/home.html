@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Justin Oudijk">
     <title>Justin Oudijk</title>
+    <!-- Reference to the sitewide stylesheet -->
     <link rel="stylesheet" href="../css/style.css">
-
 </head>
 <body>
+
+    <canvas id="matrix-bg"></canvas>
+
     <header>
         <h1>Home</h1>
         <nav>
@@ -25,107 +28,105 @@
         </nav>
     </header>
 
-<main>
-
-    <!-- ── Dossier header ── -->
-    <div class="dossier-header">
-        <div>
-            <div class="file-title glitch" data-text="SUBJECT FILE — OUDIJK, J.">SUBJECT FILE — OUDIJK, J.</div>
-            <div style="font-size:11px; color:#00ff4199; margin-top:6px; letter-spacing:2px;">CASE NO. JO-2026-001 &nbsp;|&nbsp; STATUS: ACTIVE</div>
-            <div class="stamp">UNCLASSIFIED</div>
-        </div>
-        <div class="file-meta">
-            FILED: 2026.05.27<br>
-            JURISDICTION: KENNESAW, GA / USA<br>
-            ANALYST: SYSTEM<br>
-            CLEARANCE: PUBLIC<br>
-        </div>
-    </div>
-
-    <!-- ── Section 01: Identification ── -->
-    <div class="dossier-section">
-        <div class="section-label">SECTION 01 — IDENTIFICATION</div>
-        <div class="id-block">
-            <div class="photo-frame">
-                <!-- Replace src with your actual photo path -->
-                <img src="../assets/photo.jpg" alt="Justin Oudijk" onload="this.classList.add('loaded'); this.nextElementSibling.style.display='none'">
-                <div class="placeholder-text">PHOTO<br>ON FILE<br>[ INSERT ]</div>
+    <main>
+        <!-- ── Dossier header ── -->
+        <div class="dossier-header">
+            <div>
+                <div class="file-title glitch" data-text="SUBJECT FILE — OUDIJK, J.">SUBJECT FILE — OUDIJK, J.</div>
+                <div style="font-size:11px; color:#00ff4199; margin-top:6px; letter-spacing:2px;">CASE NO. JO-2026-001 &nbsp;|&nbsp; STATUS: ACTIVE</div>
+                <div class="stamp">UNCLASSIFIED</div>
             </div>
-            <div class="id-fields">
-                <div class="field"><span class="field-key">NAME</span><span class="field-val">Oudijk, Justin</span></div>
-                <div class="field"><span class="field-key">DESIGNATION</span><span class="field-val">Security Engineer</span></div>
-                <div class="field"><span class="field-key">LOCATION</span><span class="field-val">Kennesaw, GA 30152, USA</span></div>
-                <div class="field"><span class="field-key">ORIGIN</span><span class="field-val">Hengelo, OV, The Netherlands</span></div>
-                <div class="field"><span class="field-key">AFFILIATION</span><span class="field-val">Kennesaw State University</span></div>
-                <div class="field"><span class="field-key">CONTACT</span><span class="field-val">Reach out on LinkedIn</a></span></div>
-                <div class="field"><span class="field-key">LINKEDIN</span><span class="field-val"><a href="https://linkedin.com/in/justin-oudijk" target="_blank">linkedin.com/in/justin-oudijk</a></span></div>
+            <div class="file-meta">
+                FILED: 2026.05.27<br>
+                JURISDICTION: KENNESAW, GA / USA<br>
+                ANALYST: SYSTEM<br>
+                CLEARANCE: PUBLIC<br>
             </div>
         </div>
-    </div>
 
-    <!-- ── Section 02: Profile ── -->
-    <div class="dossier-section">
-        <div class="section-label">SECTION 02 — PROFILE</div>
-        <p class="profile-text">
-            Subject has 10+ years of experience building resilient IT and OT systems across three countries.
-            Founded WinSecure in 2023, establishing a cybersecurity community for SMBs in Zwolle, The Netherlands.
-            Currently serving as President of KSU's Association of IT Professionals, overseeing 140+ members.
-            Graduate Research Assistant at Kennesaw State University, authoring research on Generative AI as a force
-            multiplier in cyber-physical systems — work accepted for presentation at AMCIS 2026.
-            Known for translating complex vulnerabilities into actionable defenses and bridging cutting-edge research
-            with hands-on implementation.
-        </p>
-    </div>
-
-    <!-- ── Section 03: Known Activities ── -->
-    <div class="dossier-section">
-        <div class="section-label">SECTION 03 — KNOWN ACTIVITIES</div>
-        <ul class="activity-list">
-            <li><span class="badge active">ACTIVE</span> GenAI threat research across OT/ICS environments — AMCIS 2026 conference paper</li>
-            <li><span class="badge active">ACTIVE</span> President, KSU Association of IT Professionals — 140+ members</li>
-            <li><span class="badge active">ACTIVE</span> Graduate Research Assistant, Kennesaw State University</li>
-            <li><span class="badge ongoing">ONGOING</span> Penetration testing, vulnerability assessments, and purple team engagements</li>
-            <li><span class="badge ongoing">ONGOING</span> Multi-cloud security, SIEM monitoring, and incident response operations</li>
-            <li><span class="badge ongoing">ONGOING</span> CTF challenges and security writeups — see associated files</li>
-        </ul>
-    </div>
-
-    <!-- ── Section 04: Associated Files ── -->
-    <div class="dossier-section">
-        <div class="section-label">SECTION 04 — ASSOCIATED FILES</div>
-        <div class="file-refs">
-            <a href="../projects/projects.html" class="file-ref">
-                <div class="ref-id">FILE REF: PROJ-001</div>
-                <div class="ref-name">Projects <span class="ref-arrow">→</span></div>
-            </a>
-            <a href="../writeups/writeups.html" class="file-ref">
-                <div class="ref-id">FILE REF: WRT-001</div>
-                <div class="ref-name">Writeups <span class="ref-arrow">→</span></div>
-            </a>
-            <a href="../challenges/challenges.html" class="file-ref">
-                <div class="ref-id">FILE REF: CTF-001</div>
-                <div class="ref-name">Challenges <span class="ref-arrow">→</span></div>
-            </a>
-            <a href="../blog/blog.html" class="file-ref">
-                <div class="ref-id">FILE REF: BLG-001</div>
-                <div class="ref-name">Blog <span class="ref-arrow">→</span></div>
-            </a>
-            <a href="../workshops/workshops.html" class="file-ref">
-                <div class="ref-id">FILE REF: WRK-001</div>
-                <div class="ref-name">Workshops <span class="ref-arrow">→</span></div>
-            </a>
-            <a href="../resume/resume.html" class="file-ref">
-                <div class="ref-id">FILE REF: RES-001</div>
-                <div class="ref-name">Resume <span class="ref-arrow">→</span></div>
-            </a>
+        <!-- ── Section 01: Identification ── -->
+        <div class="dossier-section">
+            <div class="section-label">SECTION 01 — IDENTIFICATION</div>
+            <div class="id-block">
+                <div class="photo-frame">
+                    <img src="../assets/photo.jpg" alt="Justin Oudijk" onload="this.classList.add('loaded'); this.nextElementSibling.style.display='none'">
+                    <div class="placeholder-text">PHOTO<br>ON FILE<br>[ INSERT ]</div>
+                </div>
+                <div class="id-fields">
+                    <div class="field"><span class="field-key">NAME</span><span class="field-val">Oudijk, Justin</span></div>
+                    <div class="field"><span class="field-key">DESIGNATION</span><span class="field-val">Security Engineer</span></div>
+                    <div class="field"><span class="field-key">LOCATION</span><span class="field-val">Kennesaw, GA 30152, USA</span></div>
+                    <div class="field"><span class="field-key">ORIGIN</span><span class="field-val">Hengelo, OV, The Netherlands</span></div>
+                    <div class="field"><span class="field-key">AFFILIATION</span><span class="field-val">Kennesaw State University</span></div>
+                    <div class="field"><span class="field-key">CONTACT</span><span class="field-val">Reach out on LinkedIn</span></div>
+                    <div class="field"><span class="field-key">LINKEDIN</span><span class="field-val"><a href="https://linkedin.com/in/justin-oudijk" target="_blank">linkedin.com/in/justin-oudijk</a></span></div>
+                </div>
+            </div>
         </div>
-    </div>
 
-</main>
+        <!-- ── Section 02: Profile ── -->
+        <div class="dossier-section">
+            <div class="section-label">SECTION 02 — PROFILE</div>
+            <p class="profile-text">
+                Subject has years of experience building resilient IT and OT systems across three countries.
+                Founded WinSecure in 2023, establishing a cybersecurity community for SMBs in Zwolle, The Netherlands.
+                Served as President of KSU's Association of IT Professionals, overseeing 140+ members.
+                Former Graduate Research Assistant at Kennesaw State University, authoring research on Generative AI.
+                Known for translating complex vulnerabilities into actionable defenses.
+            </p>
+        </div>
 
-<footer>
-    <span class="footer-stamp">END OF REPORT</span>
-    <span>&copy; 2026 Justin Oudijk <span class="blink">_</span></span>
-</footer>
+        <!-- ── Section 03: Known Activities ── -->
+        <div class="dossier-section">
+            <div class="section-label">SECTION 03 — KNOWN ACTIVITIES</div>
+            <ul class="activity-list">
+                <li><span class="badge completed">COMPLETED</span> GenAI threat research across OT/ICS environments</li>
+                <li><span class="badge completed">COMPLETED</span> President, KSU Association of IT Professionals — 140+ members</li>
+                <li><span class="badge completed">COMPLETED</span> Graduate Research Assistant, Kennesaw State University</li>
+                <li><span class="badge completed">COMPLETED</span> Penetration testing, vulnerability assessments, and purple team engagements</li>
+                <li><span class="badge completed">COMPLETED</span> Multi-cloud security, SIEM monitoring, and incident response operations</li>
+                <li><span class="badge completed">COMPLETED</span> CTF challenges and security writeups — see associated files</li>
+            </ul>
+        </div>
+
+        <!-- ── Section 04: Associated Files ── -->
+        <div class="dossier-section">
+            <div class="section-label">SECTION 04 — ASSOCIATED FILES</div>
+            <div class="file-refs">
+                <a href="../projects/projects.html" class="file-ref">
+                    <div class="ref-id">FILE REF: PROJ-001</div>
+                    <div class="ref-name">Projects <span class="ref-arrow">→</span></div>
+                </a>
+                <a href="../writeups/writeups.html" class="file-ref">
+                    <div class="ref-id">FILE REF: WRT-001</div>
+                    <div class="ref-name">Writeups <span class="ref-arrow">→</span></div>
+                </a>
+                <a href="../challenges/challenges.html" class="file-ref">
+                    <div class="ref-id">FILE REF: CTF-001</div>
+                    <div class="ref-name">Challenges <span class="ref-arrow">→</span></div>
+                </a>
+                <a href="../blog/blog.html" class="file-ref">
+                    <div class="ref-id">FILE REF: BLG-001</div>
+                    <div class="ref-name">Blog <span class="ref-arrow">→</span></div>
+                </a>
+                <a href="../workshops/workshops.html" class="file-ref">
+                    <div class="ref-id">FILE REF: WRK-001</div>
+                    <div class="ref-name">Workshops <span class="ref-arrow">→</span></div>
+                </a>
+                <a href="../resume/resume.html" class="file-ref">
+                    <div class="ref-id">FILE REF: RES-001</div>
+                    <div class="ref-name">Resume <span class="ref-arrow">→</span></div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <span class="footer-stamp">END OF REPORT — UNAUTHORIZED ACCESS PROHIBITED</span>
+        <span>&copy; 2026 Justin Oudijk <span class="blink">_</span></span>
+    </footer>
+
+    <!-- Reference to the external matrix animation script -->
+    <script src="../js/matrix.js"></script>
 </body>
 </html>
