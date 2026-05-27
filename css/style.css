@@ -188,8 +188,8 @@ main {
 .activity-list li {
     display: flex;
     align-items: baseline;
-    gap: 14px;
-    font-size: 13px;
+    gap: 10px;
+    font-size: 12px;
     color: #00ff41cc;
     line-height: 1.6;
 }
@@ -198,9 +198,9 @@ main {
 
 .badge {
     font-size: 10px;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     border: 1px solid #00ff41;
-    padding: 1px 6px;
+    padding: 1px 3px;
     color: #00ff41;
     flex-shrink: 0;
 }
@@ -212,7 +212,7 @@ main {
 .file-refs {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 12px;
+    gap: 20px;
 }
 
 .file-ref {
