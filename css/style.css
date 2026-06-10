@@ -271,3 +271,99 @@ footer {
     40%  { clip: rect(18px, 9999px, 22px, 0); }
     100% { clip: rect(0, 0, 0, 0); }
 }
+
+/* =========================
+   RESUME PAGE (FINAL STABLE VERSION)
+   ========================= */
+
+.resume-page {
+  background: #000000 !important;
+}
+
+/* page wrapper */
+.resume-page .document {
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+/* THE ACTUAL RESUME PAGE */
+.resume-page .WordSection1 {
+  width: 850px !important;
+  max-width: 850px !important;
+  margin: 0 auto;
+
+  background: #ffffff;
+  padding: 60px 70px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.6;
+  color: #222 !important;
+
+  text-align: left;
+}
+
+/* Word export cleanup */
+.resume-page p,
+.resume-page span,
+.resume-page div {
+  color: #222 !important;
+}
+
+/* Word tables (prevent horizontal overflow) */
+.resume-page table {
+  width: 100% !important;
+  max-width: 100% !important;
+  table-layout: fixed;
+}
+
+.resume-page td,
+.resume-page th {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* links */
+.resume-page a {
+  color: #1a73e8 !important;
+}
+
+/* kill weird Word width forcing */
+.resume-page [style*="width"] {
+  background: #000000 !important;
+  max-width: 100% !important;
+}
+
+.resume-page .document {
+  background: transparent !important;
+}
+
+.right-align-date {
+  float: right;
+  color: #555;
+  white-space: nowrap;
+}
+
+/* =========================
+   MOBILE
+   ========================= */
+@media (max-width: 900px) {
+  .resume-page .WordSection1 {
+    width: 100% !important;
+    max-width: 100% !important;
+    background: #ffffff;
+    margin: 0;
+
+    padding: 25px;
+    box-shadow: none;
+  }
+
+  .resume-page .document {
+    padding: 0;
+  }
+
+  .resume-page {
+    background: #000000 !important;
+  }
+}
