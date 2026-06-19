@@ -337,11 +337,20 @@ footer {
 
 .pdf-fallback a { color: #00ff41; }
 
-#GetVisitorIP {
-    display: block;
-    max-width: 100%;
-    min-width: 0;
-    overflow-wrap: anywhere;
+#GetVisitorIP div {
+    white-space: normal;
+    line-height: 1.4;
+}
+
+.meta-label {
+    color: #00ff4199;
+    margin-right: 6px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.meta-value {
+    color: #00ff41;
     word-break: break-word;
-    white-space: pre-line;
+    overflow-wrap: anywhere;
 }
