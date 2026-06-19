@@ -79,6 +79,7 @@ main {
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
+    min-width: 0;
     gap: 12px;
 }
 
@@ -94,6 +95,14 @@ main {
     color: #00ff4199;
     line-height: 1.8;
     text-align: right;
+
+    max-width: 320px;
+    min-width: 0;
+    flex: 0 1 320px;
+
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    white-space: normal;
 }
 
 .stamp {
@@ -329,6 +338,10 @@ footer {
 .pdf-fallback a { color: #00ff41; }
 
 #GetVisitorIP {
+    display: block;
+    max-width: 100%;
+    min-width: 0;
+    overflow-wrap: anywhere;
+    word-break: break-word;
     white-space: pre-line;
-    line-height: 1.4;
 }
