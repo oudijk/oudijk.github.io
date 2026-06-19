@@ -13,7 +13,10 @@ async function getVisitorData() {
             const regionValue = data.region || "UNKNOWN_REGION";
             const ispValue = data.org || "UNKNOWN_ISP";
 
-            const fullString = `IP: ${ipValue}\nLOC: ${cityValue}\nISP: ${ispValue}`;
+            const fullString =
+            `IP: ${ipValue}
+            LOC: ${cityValue}
+            ISP: ${ispValue}`;
             typeEffect(targetElement, ":)", 120);
 
             setTimeout(() => {

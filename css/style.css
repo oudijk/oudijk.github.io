@@ -336,7 +336,6 @@ footer {
 .pdf-fallback a { color: #00ff41; }
 
 #GetVisitorIP {
-    white-space: normal;
-    word-break: normal;
-    overflow-wrap: normal;
+    white-space: pre-line;
+    font-size: 12px;
 }
