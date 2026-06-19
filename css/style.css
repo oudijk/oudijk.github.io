@@ -327,3 +327,8 @@ footer {
 }
 
 .pdf-fallback a { color: #00ff41; }
+
+#GetVisitorIP {
+    white-space: pre-line;
+    line-height: 1.4;
+}

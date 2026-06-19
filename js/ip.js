@@ -14,8 +14,7 @@ async function getVisitorData() {
             const ispValue = data.org || "UNKNOWN_ISP";
 
             const fullString =
-                `${ipValue} [${cityValue}, ${regionValue}]`;
-
+            `IP: ${ipValue}\nLOC: ${cityValue}\nISP: ${ispValue}`;
             typeEffect(targetElement, ":)", 120);
 
             setTimeout(() => {
