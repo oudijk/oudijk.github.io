@@ -200,6 +200,11 @@ main {
 
 .activity-list li::before { content: '>'; color: #00ff41; flex-shrink: 0; }
 
+.cursor {
+    color: #00ff41;
+    margin-left: 2px;
+}
+
 .badge {
     font-size: 12px;
     letter-spacing: 3px;
