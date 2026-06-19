@@ -10,15 +10,23 @@ async function getVisitorData() {
 
             const ipValue = data.ip || "UNKNOWN";
             const cityValue = data.city || "UNKNOWN_CITY";
-            const regionValue = data.region || "UNKNOWN_REGION";
             const ispValue = data.org || "UNKNOWN_ISP";
 
-            const fullString =
-            `\nIP: ${ipValue}\nLOC: ${cityValue}\nISP: ${ispValue}`;
-            typeEffect(targetElement, ":)", 120);
+            const finalString =
+`IP: ${ipValue}
+LOC: ${cityValue}
+ISP: ${ispValue}`;
 
+            // STEP 1 already in HTML: SYSTEM
+
+            // STEP 2: :)
             setTimeout(() => {
-                typeEffect(targetElement, fullString, 120);
+                typeEffect(targetElement, ":)", 100);
+            }, 800);
+
+            // STEP 3: FINAL DATA
+            setTimeout(() => {
+                typeEffect(targetElement, finalString, 80);
             }, 2000);
 
         } catch (error) {
@@ -33,8 +41,7 @@ function typeEffect(element, text, speedInMs) {
 
     function type() {
         if (index < text.length) {
-            element.textContent += text.charAt(index);
-            index++;
+            element.textContent += text.charAt(index++);
             setTimeout(type, speedInMs);
         }
     }
