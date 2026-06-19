@@ -17,6 +17,7 @@ async function getVisitorData() {
                 const locValue = locLine ? locLine.split('=')[1] : "UNKNOWN";
                 
                 const fullString = `${ipValue} [NODE_${locValue}]`;
+                typeEffect(targetElement, "FOUND YOU...", 120);
                 typeEffect(targetElement, fullString, 120);
                 return;
             }
