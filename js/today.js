@@ -3,4 +3,19 @@ function getTodaysDate() {
     const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
     return today.toLocaleDateString('en-US', options);
 }
-document.getElementById('GetTodaysDate').textContent = getTodaysDate();
+
+function typeEffect(element, text, speedInMs) {
+    let index = 0;
+    element.textContent = ""; 
+    
+    function type() {
+        if (index < text.length) {
+            element.textContent += text.charAt(index);
+            index++;
+            setTimeout(type, speedInMs);
+        }
+    }
+    type();
+}
+
+typeEffect(document.getElementById('GetTodaysDate'), getTodaysDate(), 120);

@@ -1,40 +1,31 @@
 async function getVisitorData() {
     const targetElement = document.getElementById('GetVisitorIP');
-    
-    typeEffect(targetElement, "SYSTEM", 80);
 
     setTimeout(async () => {
         try {
-            const response = await fetch('https://ipwhois.app');
+            const response = await fetch('https://1.1.1');
             if (!response.ok) throw new Error();
             
-            const data = await response.json();
+            const text = await response.text();
+            const lines = text.split('\n');
             
-            if (data.ip && data.city && data.country_code) {
-                const fullString = `${data.ip} [${data.city}, ${data.country_code}]`;
+            const ipLine = lines.find(line => line.startsWith('ip='));
+            const locLine = lines.find(line => line.startsWith('loc='));
+            
+            if (ipLine) {
+                const ipValue = ipLine.split('=')[1];
+                const locValue = locLine ? locLine.split('=')[1] : "UNKNOWN";
+                
+                const fullString = `${ipValue} [NODE_${locValue}]`;
                 typeEffect(targetElement, fullString, 120);
                 return;
             }
             throw new Error();
 
-        } catch (primaryError) {
-            try {
-                const backupResponse = await fetch('https://freeipapi.com');
-                if (!backupResponse.ok) throw new Error();
-                
-                const backupData = await backupResponse.json();
-                if (backupData.ipAddress && backupData.cityName && backupData.countryCode) {
-                    const backupString = `${backupData.ipAddress} [${backupData.cityName}, ${backupData.countryCode}]`;
-                    typeEffect(targetElement, backupString, 120);
-                    return;
-                }
-                throw new Error();
-
-            } catch (backupError) {
-                typeEffect(targetElement, "SYSTEM", 200);
-            }
+        } catch (error) {
+            typeEffect(targetElement, "ANONYMOUS_PROXY [SECURE_NODE]", 150);
         }
-    }, 2000);
+    }, 5000);
 }
 
 function typeEffect(element, text, speedInMs) {
