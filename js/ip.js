@@ -10,40 +10,38 @@ async function getVisitorData() {
 
             const ipValue = data.ip || "UNKNOWN";
             const cityValue = data.city || "UNKNOWN_CITY";
+            const regionValue = data.region || "UNKNOWN_REGION";
             const ispValue = data.org || "UNKNOWN_ISP";
 
-            // clear
-            targetElement.innerHTML = "";
+            const fullString =
+            `IP: ${ipValue}
+            LOC: ${cityValue}
+            ISP: ${ispValue}`;
+            typeEffect(targetElement, ":)", 120);
 
-            // helper to add a line
-            function addLine(text) {
-                const div = document.createElement("div");
-                div.textContent = text;
-                targetElement.appendChild(div);
-            }
-
-            // 1. system state
-            addLine("ANALYST: SYSTEM");
-
-            // 2. fake “:)” state
             setTimeout(() => {
-                targetElement.innerHTML = "";
-                addLine("ANALYST: :)");
-
-                // 3. final data reveal
-                setTimeout(() => {
-                    targetElement.innerHTML = "";
-                    addLine(`IP: ${ipValue}`);
-                    addLine(`LOC: ${cityValue}`);
-                    addLine(`ISP: ${ispValue}`);
-                }, 1200);
-
-            }, 1200);
+                typeEffect(targetElement, fullString, 120);
+            }, 2000);
 
         } catch (error) {
-            targetElement.textContent = "ANONYMOUS_PROXY [SECURE_NODE]";
+            typeEffect(targetElement, "ANONYMOUS_PROXY [SECURE_NODE]", 150);
         }
     }, 3000);
+}
+
+function typeEffect(element, text, speedInMs) {
+    let index = 0;
+    element.textContent = "";
+
+    function type() {
+        if (index < text.length) {
+            element.textContent += text.charAt(index);
+            index++;
+            setTimeout(type, speedInMs);
+        }
+    }
+
+    type();
 }
 
 getVisitorData();
