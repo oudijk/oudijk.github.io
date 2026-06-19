@@ -3,23 +3,20 @@ async function getVisitorData() {
 
     setTimeout(async () => {
         try {
-            const response = await fetch('https://1.1.1.1/cdn-cgi/trace');
+            const response = await fetch('https://ipapi.co/json/');
             if (!response.ok) throw new Error('Network error');
 
-            const text = await response.text();
-            const lines = text.split('\n');
+            const data = await response.json();
 
-            const ipLine = lines.find(line => line.startsWith('ip='));
-            const locLine = lines.find(line => line.startsWith('loc='));
+            const ipValue = data.ip || "UNKNOWN";
+            const cityValue = data.city || "UNKNOWN_CITY";
+            const regionValue = data.region || "UNKNOWN_REGION";
+            const ispValue = data.org || "UNKNOWN_ISP";
 
-            if (!ipLine) throw new Error('No IP found');
+            const fullString =
+                `${ipValue} [${cityValue}, ${regionValue}] (${ispValue})`;
 
-            const ipValue = ipLine.split('=')[1];
-            const locValue = locLine ? locLine.split('=')[1] : "UNKNOWN";
-
-            const fullString = `${ipValue} [NODE_${locValue}]`;
-
-            typeEffect(targetElement, "FOUND YOU...", 120);
+            typeEffect(targetElement, ":)", 120);
 
             setTimeout(() => {
                 typeEffect(targetElement, fullString, 120);
