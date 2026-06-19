@@ -15,10 +15,14 @@ async function getVisitorData() {
             if (ipLine) {
                 const ipValue = ipLine.split('=')[1];
                 const locValue = locLine ? locLine.split('=')[1] : "UNKNOWN";
-                
                 const fullString = `${ipValue} [NODE_${locValue}]`;
+                
                 typeEffect(targetElement, "FOUND YOU...", 120);
-                typeEffect(targetElement, fullString, 120);
+                
+                setTimeout(() => {
+                    typeEffect(targetElement, fullString, 120);
+                }, 2000);
+                
                 return;
             }
             throw new Error();
