@@ -1,26 +1,29 @@
 async function getVisitorData() {
     const targetElement = document.getElementById('GetVisitorIP');
-    const apiUrl = "https://freeipapi.com";
 
     setTimeout(async () => {
         try {
-            const response = await fetch(apiUrl);
-            if (!response.ok) throw new Error();
-            
-            const data = await response.json();
-            
-            if (data.ipAddress && data.cityName && data.countryCode) {
-                const fullString = `${data.ipAddress} [${data.cityName.toUpperCase()}, ${data.countryCode}]`;
-                
-                typeEffect(targetElement, "FOUND YOU...", 120);
-                
-                setTimeout(() => {
-                    typeEffect(targetElement, fullString, 120);
-                }, 2000);
-                
-                return;
-            }
-            throw new Error();
+            const response = await fetch('https://1.1.1.1/cdn-cgi/trace');
+            if (!response.ok) throw new Error('Network error');
+
+            const text = await response.text();
+            const lines = text.split('\n');
+
+            const ipLine = lines.find(line => line.startsWith('ip='));
+            const locLine = lines.find(line => line.startsWith('loc='));
+
+            if (!ipLine) throw new Error('No IP found');
+
+            const ipValue = ipLine.split('=')[1];
+            const locValue = locLine ? locLine.split('=')[1] : "UNKNOWN";
+
+            const fullString = `${ipValue} [NODE_${locValue}]`;
+
+            typeEffect(targetElement, "FOUND YOU...", 120);
+
+            setTimeout(() => {
+                typeEffect(targetElement, fullString, 120);
+            }, 2000);
 
         } catch (error) {
             typeEffect(targetElement, "ANONYMOUS_PROXY [SECURE_NODE]", 150);
@@ -30,8 +33,8 @@ async function getVisitorData() {
 
 function typeEffect(element, text, speedInMs) {
     let index = 0;
-    element.textContent = ""; 
-    
+    element.textContent = "";
+
     function type() {
         if (index < text.length) {
             element.textContent += text.charAt(index);
@@ -39,6 +42,7 @@ function typeEffect(element, text, speedInMs) {
             setTimeout(type, speedInMs);
         }
     }
+
     type();
 }
 
