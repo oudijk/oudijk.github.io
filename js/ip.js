@@ -12,58 +12,38 @@ async function getVisitorData() {
             const cityValue = data.city || "UNKNOWN_CITY";
             const ispValue = data.org || "UNKNOWN_ISP";
 
-            const lines = [
-                ["ANALYST:", "SYSTEM"],
-                ["ANALYST:", ":)"],
-                ["IP:", ipValue],
-                ["LOC:", cityValue],
-                ["ISP:", ispValue],
-                ["CLEARANCE:", "PUBLIC"]
-            ];
-
+            // clear
             targetElement.innerHTML = "";
 
-            let i = 0;
-
-            function renderLine() {
-                if (i >= lines.length) return;
-
-                const [label, value] = lines[i];
-
-                const line = document.createElement("div");
-                line.innerHTML = `
-                    <span class="meta-label">${label}</span>
-                    <span class="meta-value">${value}</span>
-                `;
-
-                targetElement.appendChild(line);
-
-                i++;
-                setTimeout(renderLine, 350);
+            // helper to add a line
+            function addLine(text) {
+                const div = document.createElement("div");
+                div.textContent = text;
+                targetElement.appendChild(div);
             }
 
-            renderLine();
+            // 1. system state
+            addLine("ANALYST: SYSTEM");
+
+            // 2. fake “:)” state
+            setTimeout(() => {
+                targetElement.innerHTML = "";
+                addLine("ANALYST: :)");
+
+                // 3. final data reveal
+                setTimeout(() => {
+                    targetElement.innerHTML = "";
+                    addLine(`IP: ${ipValue}`);
+                    addLine(`LOC: ${cityValue}`);
+                    addLine(`ISP: ${ispValue}`);
+                }, 1200);
+
+            }, 1200);
 
         } catch (error) {
-            targetElement.innerHTML = "";
-            typeEffect(targetElement, "ANONYMOUS_PROXY [SECURE_NODE]", 150);
+            targetElement.textContent = "ANONYMOUS_PROXY [SECURE_NODE]";
         }
     }, 3000);
-}
-
-function typeEffect(element, text, speedInMs) {
-    let index = 0;
-    element.textContent = "";
-
-    function type() {
-        if (index < text.length) {
-            element.textContent += text.charAt(index);
-            index++;
-            setTimeout(type, speedInMs);
-        }
-    }
-
-    type();
 }
 
 getVisitorData();
