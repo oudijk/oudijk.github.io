@@ -14,7 +14,7 @@ async function getVisitorData() {
             const ispValue = data.org || "UNKNOWN_ISP";
 
             const fullString =
-                `${ipValue} [${cityValue}, ${regionValue}] (${ispValue})`;
+                `${ipValue} [${cityValue}, ${regionValue}]`;
 
             typeEffect(targetElement, ":)", 120);
 
@@ -25,7 +25,7 @@ async function getVisitorData() {
         } catch (error) {
             typeEffect(targetElement, "ANONYMOUS_PROXY [SECURE_NODE]", 150);
         }
-    }, 5000);
+    }, 3000);
 }
 
 function typeEffect(element, text, speedInMs) {
