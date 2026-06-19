@@ -15,7 +15,7 @@ async function getVisitorData() {
 
             const fullString =
             `IP: ${ipValue}
-            LOC: ${cityValue}
+            LOC: ${cityValue}\n
             ISP: ${ispValue}`;
             typeEffect(targetElement, ":)", 120);
 
