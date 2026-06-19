@@ -1,21 +1,16 @@
 async function getVisitorData() {
     const targetElement = document.getElementById('GetVisitorIP');
+    const apiUrl = "https://freeipapi.com";
 
     setTimeout(async () => {
         try {
-            const response = await fetch('https://1.1.1');
+            const response = await fetch(apiUrl);
             if (!response.ok) throw new Error();
             
-            const text = await response.text();
-            const lines = text.split('\n');
+            const data = await response.json();
             
-            const ipLine = lines.find(line => line.startsWith('ip='));
-            const locLine = lines.find(line => line.startsWith('loc='));
-            
-            if (ipLine) {
-                const ipValue = ipLine.split('=')[1];
-                const locValue = locLine ? locLine.split('=')[1] : "UNKNOWN";
-                const fullString = `${ipValue} [NODE_${locValue}]`;
+            if (data.ipAddress && data.cityName && data.countryCode) {
+                const fullString = `${data.ipAddress} [${data.cityName.toUpperCase()}, ${data.countryCode}]`;
                 
                 typeEffect(targetElement, "FOUND YOU...", 120);
                 
