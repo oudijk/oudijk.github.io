@@ -1,10 +1,11 @@
 async function getVisitorData() {
+    const label = document.getElementById('analystLabel');
     const targetElement = document.getElementById('GetVisitorIP');
 
     setTimeout(async () => {
         try {
             const response = await fetch('https://ipapi.co/json/');
-            if (!response.ok) throw new Error('Network error');
+            if (!response.ok) throw new Error();
 
             const data = await response.json();
 
@@ -17,20 +18,18 @@ async function getVisitorData() {
 LOC: ${cityValue}
 ISP: ${ispValue}`;
 
-            // STEP 1 already in HTML: SYSTEM
-
-            // STEP 2: :)
             setTimeout(() => {
-                typeEffect(targetElement, ":)", 100);
+                typeEffect(targetElement, ":)", 80);
             }, 800);
 
-            // STEP 3: FINAL DATA
             setTimeout(() => {
-                typeEffect(targetElement, finalString, 80);
+                label.parentElement.style.display = "none";
+                typeEffect(targetElement, finalString, 60);
             }, 2000);
 
         } catch (error) {
-            typeEffect(targetElement, "ANONYMOUS_PROXY [SECURE_NODE]", 150);
+            label.textContent = "";
+            typeEffect(targetElement, "ANONYMOUS_PROXY", 150);
         }
     }, 3000);
 }
