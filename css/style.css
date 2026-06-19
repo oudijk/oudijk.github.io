@@ -72,7 +72,6 @@ main {
 
 /* ── Dossier header ── */
 .dossier-header {
-    min-width: 0;
     border: 1px solid #00ff41;
     padding: 20px 28px;
     margin-bottom: 32px;
@@ -91,7 +90,6 @@ main {
 }
 
 .dossier-header .file-meta {
-    min-width: 0;
     font-size: 14px;
     color: #00ff4199;
     line-height: 1.8;
@@ -201,6 +199,11 @@ main {
 }
 
 .activity-list li::before { content: '>'; color: #00ff41; flex-shrink: 0; }
+
+.cursor {
+    color: #00ff41;
+    margin-left: 2px;
+}
 
 .badge {
     font-size: 12px;
@@ -326,9 +329,6 @@ footer {
 .pdf-fallback a { color: #00ff41; }
 
 #GetVisitorIP {
-    display: block;
     white-space: pre-line;
-    overflow-wrap: anywhere;
-    word-break: break-word;
-    min-width: 0;
+    line-height: 1.4;
 }
